@@ -57,6 +57,8 @@ __author__ = 'api.nickm@gmail.com (Nick Mihailovski)'
 
 import sys
 import sample_utils
+import urlparse as UP
+import item_view_xml
 
 from apiclient.errors import HttpError
 from oauth2client.client import AccessTokenRefreshError
@@ -78,6 +80,8 @@ def main(argv):
   try:
     results = get_api_query(service).execute()
     print_results(results)
+    
+    write_rows(results, '20120416.tsv')
 
   except TypeError, error:
     # Handle errors in constructing a query.
@@ -110,7 +114,7 @@ def get_api_query(service):
       filters='ga:pagePath=@?id=DUKE',
       dimensions='ga:pagePath,ga:date,ga:hour,ga:city,ga:country',
       sort='-ga:date,ga:hour',
-      max_results='100000')
+      max_results='10000')
 
 # Ranked pages by number of views
 #   return service.data().ga().get(
@@ -270,6 +274,62 @@ def print_rows(results):
       print '\t'.join(row)
   else:
     print 'No Rows Found'
+
+def return_column_headers(results):
+  """Prints the information for each column.
+
+  The main data from the API is returned as rows of data. The column
+  headers describe the names and types of each column in rows.
+
+
+  Args:
+    results: The response returned from the Core Reporting API.
+    
+  Return:
+    list of strings for column header names
+  """
+  
+  names = []
+  headers = results.get('columnHeaders')
+  
+  for header in headers:
+    # Print Dimension or Metric name.
+    names.append(header.get('name').lstrip('ga:'))
+
+  return names
+
+def write_rows(results, filepath):
+  """Prints all the rows of data returned by the API.
+
+  Args:
+    results: The response returned from the Core Reporting API.
+    filepath: The absolute path of the output file (CSV)
+  """
+
+  if results.get('rows', []):
+    f = open(filepath, 'w')
+    
+    names = return_column_headers(results)
+    f.write('\t'.join(names) + '\tid\tcallNumber\n')
+    
+    # get ID from pagePath
+    pgIdx = names.index('pagePath')
+    total_count = len(results.get('rows'))
+
+    for ii,row in enumerate(results.get('rows')):
+      page_path = row[pgIdx]
+      id_str = UP.parse_qs(UP.urlparse(page_path).query)['id'][0]
+      call_number = item_view_xml.get_call_number(id_str)
+      
+      # Multiple call-numbers separated by '|'
+      first_call_number = call_number.split('|')[0]
+      lcc = first_call_number.split(' ')[0]
+      print ii, '/', total_count, lcc
+        
+      f.write('\t'.join(row) + '\t' + id_str + '\t' + lcc + '\n')
+  else:
+    print 'No Rows Found'
+
 
 if __name__ == '__main__':
   main(sys.argv)
