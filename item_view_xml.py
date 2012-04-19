@@ -11,15 +11,15 @@ import random
 import urllib
 import urlparse as UP
 
-host = 'search.library.duke.edu'
-headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:8.0.1) Gecko/20100101 Firefox/8.0.1', 'Content-Type':'application/xml', 'Accept':'application/xml'}
-conn = httplib.HTTPConnection(host)
-
 def get_soup(id):
 
   # id is a string, e.g. 
   # id = 'DUKE003157848'
   
+	host = 'search.library.duke.edu'
+	headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:8.0.1) Gecko/20100101 Firefox/8.0.1', 'Content-Type':'application/xml', 'Accept':'application/xml'}
+	conn = httplib.HTTPConnection(host)
+
 	query_dict = {'id': id, 'output-format': 'xml'}
 	
 	query_str = urllib.urlencode(query_dict, True)
@@ -32,7 +32,7 @@ def get_soup(id):
 	conn.request("GET", search_url, None, headers)
 	
 	resp = conn.getresponse()
-	print "Response Status:", resp.status
+	# print "Response Status:", resp.status
 	# sys.stdout.flush()
 	
 	soup = None
@@ -42,6 +42,7 @@ def get_soup(id):
 		# http://stackoverflow.com/questions/1208916/decoding-html-entities-with-python
 		soup = BeautifulStoneSoup(xml, convertEntities=BeautifulStoneSoup.HTML_ENTITIES, smartQuotesTo=None)
 
+	conn.close()
 	return soup
 	
 	
@@ -81,6 +82,7 @@ def get_call_number(id):
 
 if __name__ == '__main__':
 
-  id = 'DUKE003157848'
+  # id = 'DUKE003157848'
+  id = 'DUKE003856078'
   obj = get_xml_object(id)
-  print obj['call-number']
+  print obj

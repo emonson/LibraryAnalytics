@@ -102,26 +102,26 @@ def get_api_query(service):
   """
 
 # All pages returned
-  return service.data().ga().get(
-      ids=TABLE_ID,
-      start_date='2012-04-16',
-      end_date='2012-04-16',
-      metrics='ga:visitors',
-      filters='ga:pagePath=@?id=DUKE',
-      dimensions='ga:pagePath,ga:date,ga:hour,ga:city,ga:country',
-      sort='-ga:date,ga:hour',
-      max_results='100000')
-
-# Ranked pages by number of views
 #   return service.data().ga().get(
 #       ids=TABLE_ID,
-#       start_date='2012-01-01',
-#       end_date='2012-04-17',
-#       metrics='ga:pageviews',
+#       start_date='2012-04-18',
+#       end_date='2012-04-18',
+#       metrics='ga:visitors',
 #       filters='ga:pagePath=@?id=DUKE',
-#       dimensions='ga:pagePath',
-#       sort='-ga:pageviews',
-#       max_results='50')
+#       dimensions='ga:pagePath,ga:date,ga:hour,ga:city,ga:country',
+#       sort='-ga:date,ga:hour',
+#       max_results='100000')
+
+# Ranked pages by number of views
+  return service.data().ga().get(
+      ids=TABLE_ID,
+      start_date='2012-04-18',
+      end_date='2012-04-18',
+      metrics='ga:pageviews',
+      filters='ga:pagePath=@?id=DUKE',
+      dimensions='ga:pagePath',
+      sort='-ga:pageviews',
+      max_results='50')
 
 # Search terms for item view site...
 #   return service.data().ga().get(
