@@ -28,7 +28,7 @@ def get_soup(id):
 	# sys.stdout.flush()
 		
 	# sys.stdout.flush()
-	time.sleep(0.2 + 0.2*random.random())
+	# time.sleep(0.2 + 0.2*random.random())
 	conn.request("GET", search_url, None, headers)
 	
 	resp = conn.getresponse()
@@ -59,12 +59,13 @@ def get_xml_object(id):
 		
 		props = soup.find('properties')
 		
-		for prop in props.findAll(recursive=False):
-			items = prop.findAll('item')
-			if len(items) > 1:
-				doc[prop.name] = [item.string for item in items]
-			else:
-				doc[prop.name] = items[0].string
+		if props is not None:
+			for prop in props.findAll(recursive=False):
+				items = prop.findAll('item')
+				if len(items) > 1:
+					doc[prop.name] = [item.string for item in items]
+				else:
+					doc[prop.name] = items[0].string
 		
 		return doc
 
