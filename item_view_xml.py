@@ -54,7 +54,7 @@ def get_xml_object(id):
 		doc = {}
 		cc = soup.find('call-number')
 		if cc is not None:
-			print cc.item.text.split(' ')[0]
+			print repr(cc.item.text.split(' ')[0])
 			# sys.stdout.flush()
 		
 		props = soup.find('properties')

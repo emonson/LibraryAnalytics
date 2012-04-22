@@ -98,12 +98,12 @@ def main(argv):
 		#   at a time, anyway...
 		metrics = 'ga:visitors'
 		dimensions = 'ga:pagePath,ga:hour,ga:city,ga:region,ga:country,ga:latitude,ga:longitude'
-		start_date_str = '2012-01-29'
-		end_date_str = '2012-04-19'
+		start_date_str = '2011-10-06'
+		end_date_str = '2012-11-02'
 		start_date = datetime.strptime(start_date_str, '%Y-%m-%d')
 		end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
 		date_delta = end_date - start_date
-		delta_days = date_delta.days
+		delta_days = date_delta.days + 1
 		one_day = timedelta(days = 1)
 		
 		if delta_days > 0:
@@ -112,13 +112,8 @@ def main(argv):
 				date_str = date.strftime('%Y-%m-%d')
 				results = get_api_query(service, date_str, metrics, dimensions).execute()
 				
-				print_results(results)
+				# print_results(results)
 				rows_to_mongo(results, date_str)
-		elif delta_days == 0:
-			results = get_api_query(service, start_date_str, metrics, dimensions).execute()
-			
-			print_results(results)
-			rows_to_mongo(results, start_date_str)
 			
 
 	except TypeError, error:

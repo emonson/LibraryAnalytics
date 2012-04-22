@@ -113,10 +113,11 @@ def get_api_query(service):
 #       max_results='100000')
 
 # Ranked pages by number of views
+  date = '2011-07-06'
   return service.data().ga().get(
       ids=TABLE_ID,
-      start_date='2012-04-18',
-      end_date='2012-04-18',
+      start_date=date,
+      end_date=date,
       metrics='ga:pageviews',
       filters='ga:pagePath=@?id=DUKE',
       dimensions='ga:pagePath',
