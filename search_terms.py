@@ -65,7 +65,10 @@ from oauth2client.client import AccessTokenRefreshError
 # The table ID is used to identify from which Google Anlaytics profile
 # to retrieve data. This ID is in the format ga:xxxx where xxxx is the
 # profile ID.
-TABLE_ID = 'ga:53681003'
+# 
+# summon (search all, not just 'catalog')
+# TABLE_ID = 'ga:53681003'
+table_ids = {'search':'ga:47958423', 'summon':'ga:53681003'}
 
 
 def main(argv):
@@ -101,14 +104,31 @@ def get_api_query(service):
     service: The service object built by the Google API Python client library.
   """
 
+#   return service.data().ga().get(
+#       ids=table_ids['summon'],
+#       start_date='2012-03-20',
+#       end_date='2012-03-20',
+#       metrics='ga:visitors',
+#       dimensions='ga:searchKeyword,ga:hour,ga:city,ga:region,ga:country,ga:longitude,ga:latitude',
+#       max_results='10000')
+
   return service.data().ga().get(
-      ids=TABLE_ID,
-      start_date='2012-01-01',
-      end_date='2012-04-17',
-      metrics='ga:pageviews',
-      dimensions='ga:searchKeyword',
-      sort='-ga:pageviews',
-      max_results='50')
+      ids=table_ids['search'],
+      start_date='2011-07-06',
+      end_date='2011-07-06',
+      metrics='ga:visitors',
+      dimensions='ga:searchKeyword,ga:hour,ga:city,ga:region,ga:country,ga:longitude,ga:latitude',
+      max_results='10000')
+
+#       ids=TABLE_ID,
+#       start_date='2012-01-01',
+#       end_date='2012-04-17',
+#       metrics='ga:pageviews',
+#       dimensions='ga:searchKeyword',
+#       sort='-ga:pageviews',
+#       max_results='50')
+
+
 
 
 def print_results(results):
@@ -124,7 +144,7 @@ def print_results(results):
   print_query(results)
   print_column_headers(results)
   print_totals_for_all_results(results)
-  print_rows(results)
+  # print_rows(results)
 
 
 def print_report_info(results):
@@ -244,7 +264,7 @@ def print_rows(results):
   print 'Rows:'
   if results.get('rows', []):
     for row in results.get('rows'):
-      print '\t'.join(row)
+      print ('\t'.join(row)).encode('utf-8')
   else:
     print 'No Rows Found'
 
