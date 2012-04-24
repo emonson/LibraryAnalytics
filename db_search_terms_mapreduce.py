@@ -4,6 +4,8 @@
 # http://architects.dzone.com/articles/walkthrough-mongodb-mapreduce
 
 from pymongo import Connection
+from bson.code import Code
+from bson.son import SON
 
 # Make a connection to Mongo.
 try:
@@ -34,7 +36,7 @@ r = """function r (key,values) {
 }"""
 
 print 'Running overall counts'
-db.searches.map_reduce(m, r, out="out_term_key_overall_counts")
+db.searches.map_reduce(m, r, out=SON([("replace","out_term_key_overall_counts")]))
 
 # keyed by term, compile counts per date
 map = """function map () {
@@ -86,8 +88,10 @@ reduce = """function reduce(key, values) {
   return out;
 }"""
 
-print 'Running term key date counts
-db.searches.map_reduce(map, reduce, out="out_term_key_date_counts")
+print 'Running term key date counts'
+# db.searches.map_reduce(map, reduce, query={'new':True}, out=SON([("reduce","out_term_key_date_counts")]))
+db.searches.map_reduce(map, reduce, out=SON([("replace","out_term_key_date_counts")]))
 print 'Running date key term counts'
-db.searches.map_reduce(map2, reduce, out="out_date_key_term_counts")
+# db.searches.map_reduce(map2, reduce, query={'new':True}, out=SON([("reduce","out_date_key_term_counts")]))
+db.searches.map_reduce(map2, reduce, out=SON([("replace","out_date_key_term_counts")]))
 print 'done'
