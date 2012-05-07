@@ -40,6 +40,38 @@ r = Code("function(key,values) {"
 # db.pageviews.map_reduce(m2, r, out=SON([("replace","out_lcccategory_key_total_count")]))
 # print 'Done'
 
+print 'Loading results of mapreduce back in for normalization'
+lcc_first_counts = {}
+for doc in db.out_lccfirst_key_total_count.find({}):
+	lcc_first_counts[doc['_id']] = doc['value']
+
+lcc_cat_counts = {}
+for doc in db.out_lcccategory_key_total_count.find({}):
+	lcc_cat_counts[doc['_id']] = doc['value']
+
+print 'Normalizing visitor counts by overall lcc sums'
+total_count = db.pageviews.find().count()
+
+for count,doc in enumerate(db.pageviews.find({},{'_id':True,'lcc_first_letter':True,'lcc_category':True,'visitors':True},snapshot=True)):
+
+	if ('lcc_first_letter' in doc) and ('lcc_category' in doc):
+		if count%1000 == 0:
+			print count, '/', total_count
+	
+		visitors_per_lcc_first = float(doc['visitors'])/float(lcc_first_counts[doc['lcc_first_letter']])
+		visitors_per_lcc_category = float(doc['visitors'])/float(lcc_cat_counts[doc['lcc_category']])
+		
+		db.pageviews.update({'_id':doc['_id']},{'$set':{'visitors_per_lcc_first':visitors_per_lcc_first,'visitors_per_lcc_category':visitors_per_lcc_category}}, upsert=False, multi=False)
+	
+	elif ('visitors' in doc):
+	
+		visitors_per_lcc_first = float(doc['visitors'])/float(lcc_first_counts[None])
+		visitors_per_lcc_category = float(doc['visitors'])/float(lcc_cat_counts[None])
+		
+		db.pageviews.update({'_id':doc['_id']},{'$set':{'visitors_per_lcc_first':visitors_per_lcc_first,'visitors_per_lcc_category':visitors_per_lcc_category}}, upsert=False, multi=False)
+	
+print 'Done'
+
 # keyed by term, compile counts per date
 map_f = Code("function() {"
              "  var ts = this.timestamp;"
@@ -79,10 +111,10 @@ reduce_f = Code("function(key, values) {"
               "  return out;"
               "}")
 
-print 'Running lcc first letter key date counts'
-# db.searches.map_reduce(map, reduce, query={'new':True}, out=SON([("reduce","out_lccfirst_key_date_counts")]))
-db.pageviews.map_reduce(map_f, reduce_f, out=SON([("replace","out_lccfirst_key_date_counts")]))
-print 'Running date key lcc first letter counts'
-# db.searches.map_reduce(map2, reduce, query={'new':True}, out=SON([("reduce","out_date_key_lccfirst_counts")]))
-db.pageviews.map_reduce(map_f2, reduce_f, out=SON([("replace","out_date_key_lccfirst_counts")]))
-print 'done'
+# print 'Running lcc first letter key date counts'
+# # db.searches.map_reduce(map, reduce, query={'new':True}, out=SON([("reduce","out_lccfirst_key_date_counts")]))
+# db.pageviews.map_reduce(map_f, reduce_f, out=SON([("replace","out_lccfirst_key_date_counts")]))
+# print 'Running date key lcc first letter counts'
+# # db.searches.map_reduce(map2, reduce, query={'new':True}, out=SON([("reduce","out_date_key_lccfirst_counts")]))
+# db.pageviews.map_reduce(map_f2, reduce_f, out=SON([("replace","out_date_key_lccfirst_counts")]))
+# print 'done'
