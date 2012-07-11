@@ -1,0 +1,535 @@
+A -- General Works
+
+Subclass AC  Collections. Series. Collected works
+Subclass AE  Encyclopedias
+Subclass AG  Dictionaries and other general reference works
+Subclass AI  Indexes
+Subclass AM  Museums. Collectors and collecting
+Subclass AN  Newspapers
+Subclass AP  Periodicals
+Subclass AS  Academies and learned societies
+Subclass AY  Yearbooks. Almanacs. Directories
+Subclass AZ  History of scholarship and learning. The humanities
+
+B -- Philosophy. Psychology. Religion
+
+Subclass B  Philosophy (General)
+Subclass BC  Logic
+Subclass BD  Speculative philosophy
+Subclass BF  Psychology
+Subclass BH  Aesthetics
+Subclass BJ  Ethics
+Subclass BL  Religions. Mythology. Rationalism
+Subclass BM  Judaism
+Subclass BP  Islam. Bahaism. Theosophy, etc.
+Subclass BQ  Buddhism
+Subclass BR  Christianity
+Subclass BS  The Bible
+Subclass BT  Doctrinal Theology
+Subclass BV  Practical Theology
+Subclass BX  Christian Denominations
+
+C -- Auxiliary Sciences Of History
+
+Subclass C  Auxiliary Sciences of History (General)
+Subclass CB  History of Civilization
+Subclass CC  Archaeology
+Subclass CD  Diplomatics. Archives. Seals
+Subclass CE  Technical Chronology. Calendar
+Subclass CJ  Numismatics
+Subclass CN  Inscriptions. Epigraphy
+Subclass CR  Heraldry
+Subclass CS  Genealogy
+Subclass CT  Biography
+
+D -- World History And History Of Europe, Asia, Africa, Australia, New Zealand, etc.
+
+Subclass D  History (General) 
+Subclass DA  Great Britain 
+Subclass DAW Central Europe 
+Subclass DB  Austria - Liechtenstein - Hungary - Czechoslovakia 
+Subclass DC  France - Andorra - Monaco 
+Subclass DD  Germany 
+Subclass DE  Greco-Roman World 
+Subclass DF  Greece 
+Subclass DG  Italy - Malta 
+Subclass DH  Low Countries - Benelux Countries 
+Subclass DJ  Netherlands (Holland) 
+Subclass DJK  Eastern Europe (General) 
+Subclass DK  Russia. Soviet Union. Former Soviet Republics - Poland 
+Subclass DL  Northern Europe. Scandinavia 
+Subclass DP  Spain - Portugal 
+Subclass DQ  Switzerland 
+Subclass DR  Balkan Peninsula 
+Subclass DS  Asia 
+Subclass DT  Africa 
+Subclass DU  Oceania (South Seas) 
+Subclass DX  Romanies 
+
+E -- History Of The Americas
+
+Subclass E  History Of The Americas: America, US
+
+F -- History Of The Americas
+
+Subclass F  History Of The Americas: US Local, British, Dutch, French, Latin & Spanish America
+
+G -- Geography. Anthropology. Recreation
+
+Subclass G  Geography (General). Atlases. Maps
+Subclass GA  Mathematical geography. Cartography
+Subclass GB  Physical geography
+Subclass GC  Oceanography
+Subclass GE  Environmental Sciences
+Subclass GF  Human ecology. Anthropogeography
+Subclass GN  Anthropology
+Subclass GR  Folklore
+Subclass GT  Manners and customs (General)
+Subclass GV  Recreation. Leisure
+
+H -- Social Sciences
+
+Subclass H Social sciences (General)
+Subclass HA Statistics
+Subclass HB Economic theory. Demography
+Subclass HC Economic history and conditions
+Subclass HD Industries. Land use. Labor
+Subclass HE Transportation and communications
+Subclass HF Commerce
+Subclass HG Finance
+Subclass HJ Public finance
+Subclass HM Sociology (General)
+Subclass HN Social history and conditions. Social problems. Social reform
+Subclass HQ The family. Marriage. Women
+Subclass HS Societies: secret, benevolent, etc.
+Subclass HT Communities. Classes. Races
+Subclass HV Social pathology. Social and public welfare. Criminology
+Subclass HX Socialism. Communism. Anarchism
+
+J -- Political Science
+
+Subclass J  General legislative and executive papers 
+Subclass JA  Political science (General) 
+Subclass JC  Political theory 
+Subclass JF  Political institutions and public administration 
+Subclass JJ  Political institutions and public administration (North America) 
+Subclass JK  Political institutions and public administration (United States) 
+Subclass JL  Political institutions and public administration (Canada, Latin America, etc.) 
+Subclass JN  Political institutions and public administration (Europe) 
+Subclass JQ  Political institutions and public administration (Asia, Africa, Australia, Pacific Area, etc.) 
+Subclass JS  Local government. Municipal government 
+Subclass JV  Colonies and colonization. Emigration and immigration. International migration 
+Subclass JX  International law (obsolete: see JZ and KZ)
+Subclass JZ  International relations 
+
+K -- Law
+
+Subclass K  Law in general. Comparative and uniform law. Jurisprudence 
+Subclass KB  Religious law in general. Comparative religious law. Jurisprudence 
+Subclass KBM  Jewish law 
+Subclass KBP  Islamic law 
+Subclass KBR  History of canon law 
+Subclass KBU  Law of the Roman Catholic Church. The Holy See 
+Subclass KD  Law of United Kingdom and Ireland 
+Subclass KDC  Law of Scotland 
+Subclass KDE  Law of Northern Ireland 
+Subclass KDG  Law of Isle of Man. Channel Islands 
+Subclass KDK  Law of Ireland (Eire)
+Subclass KDZ  Law of America. North America 
+Subclass KE  Law of Canada 
+Subclass KF  Law of United States 
+Subclass KG  Law of Latin America - Mexico and Central America - West Indies. Caribbean area 
+Subclass KH  Law of South America 
+Subclass KJ  Law of Europe 
+Subclass KJ  Law of History of Law 
+Subclass KJ  Law of Germanic law 
+Subclass KJA  Law of Roman law 
+Subclass KJC  Law of Regional comparative and uniform law 
+Subclass KJE  Law of Regional organization and integration. Comparative law 
+Subclass KJG  Law of Albania 
+Subclass KJH  Law of Andorra 
+Subclass KJJ  Law of Austria 
+Subclass KJK  Law of Belgium 
+Subclass KJM  Law of Bulgaria 
+Subclass KJN  Law of Cyprus 
+Subclass KJP  Law of Czechoslovakia 
+Subclass KJR  Law of Denmark 
+Subclass KJS  Law of Estonia 
+Subclass KJT  Law of Finland 
+Subclass KJV  Law of France - National laws 
+Subclass KJW  Law of France - Individual regions, provinces, departments, etc. 
+Subclass KJW  Law of France - Individual cities 
+Subclass KK  Law of Germany and West Germany 
+Subclass KKA  Law of East Germany 
+Subclass KKB  Law of Germany - Individual states, provinces, and cities 
+Subclass KKC  Law of Germany - Individual states, provinces, and cities 
+Subclass KKE  Law of Greece 
+Subclass KKF  Law of Hungary 
+Subclass KKG  Law of Iceland 
+Subclass KKH  Law of Italy 
+Subclass KKI  Law of Latvia 
+Subclass KKJ  Law of Liechtenstein 
+Subclass KKJ  Law of Lithuania 
+Subclass KKK  Law of Luxembourg 
+Subclass KKK  Law of Malta 
+Subclass KKL  Law of Monaco 
+Subclass KKM  Law of Netherlands 
+Subclass KKN  Law of Norway 
+Subclass KKP  Law of Poland 
+Subclass KKQ  Law of Portugal 
+Subclass KKR  Law of Romania 
+Subclass KKS  Law of San Marino 
+Subclass KKT  Law of Spain 
+Subclass KKV  Law of Sweden 
+Subclass KKW  Law of Switzerland 
+Subclass KKX  Law of Turkey 
+Subclass KKY  Law of Ukraine (1991- ) 
+Subclass KKZ  Law of Yugoslavia
+Subclass KL  History of law. The ancient orient 
+Subclass KLA  Law of Russia. Soviet Union 
+Subclass KLB  Law of Russia (Federation, 1992- ) 
+Subclass KLD  Law of Armenian S.S.R. (to 1991) 
+Subclass KLE  Law of Azerbaijan 
+Subclass KLF  Law of Belarus (Republic) 
+Subclass KLH  Law of Georgia (Republic) 
+Subclass KLM  Law of Moldova 
+Subclass KLN  Law of Russian S.F.S.R. (to 1991) 
+Subclass KLP  Law of Ukraine (1919-1991) 
+Subclass KLP  Law of Zakavkazskaia Sotsialisticheskaia Federativnaia Sovetskaia Respublika (to 1936) 
+Subclass KLQ  Law of Bukharskaia Narodnaia Sovetskaia Respublika (to 1924) 
+Subclass KLR  Law of Kazakhstan 
+Subclass KLR  Law of Khorezmskaia Sovetskaia Sotsialisticheskaia Respublika (to 1924) 
+Subclass KLS  Law of Kyrgyzstan 
+Subclass KLT  Law of Tadjikistan 
+Subclass KLV  Law of Turkmenistan 
+Subclass KLW  Law of Uzbekistan   
+Subclass KM  Law of General Middle East. Southwest Asia 
+Subclass KMC  Law of Regional comparative and uniform law 
+Subclass KME  Law of Regional organization and integration 
+Subclass KMF  Law of Armenia (Republic) 
+Subclass KMF  Law of Bahrain 
+Subclass KMG  Law of Gaza 
+Subclass KMH  Law of Iran 
+Subclass KMJ  Law of Iraq 
+Subclass KMK  Law of Israel 
+Subclass KML  Law of Jerusalem 
+Subclass KMM  Law of Jordan 
+Subclass KMM  Law of West Bank (Territory under Israeli occupation, 1967-   ) 
+Subclass KMN  Law of Kuwait 
+Subclass KMP  Law of Lebanon 
+Subclass KMQ  Law of Oman 
+Subclass KMQ  Law of Palestine (to 1948) 
+Subclass KMS  Law of Qatar 
+Subclass KMT  Law of Saudi Arabia 
+Subclass KMU  Law of Syria 
+Subclass KMV  Law of United Arab Emirates 
+Subclass KMX  Law of Yemen 
+Subclass KMY  Law of Yemen (People's Democratic Republic) (to 1990)   
+Subclass KN  Law of Asia South Asia. Southeast Asia. East Asia 
+Subclass KNC  Asia Regional comparative and uniform law 
+Subclass KNE  Asia Law of Regional organization and integration 
+Subclass KNF  Law of Afghanistan 
+Subclass KNG  Law of Bangladesh 
+Subclass KNH  Law of Bhutan 
+Subclass KNK  Law of Brunei 
+Subclass KNL  Law of Burma 
+Subclass KNM  Law of Cambodia 
+Subclass KNN  Law of China 
+Subclass KNP  Law of China (Republic, 1949- ). Taiwan 
+Subclass KNQ  Law of China (People's Republic, 1949- ) 
+Subclass KNR  Law of Hong Kong 
+Subclass KNS  Law of India 
+Subclass KNT  Law of India: States, cities, etc. 
+Subclass KNU  Law of India: States, cities, etc. 
+Subclass KNV  Law of French Indochina 
+Subclass KNW  Law of Indonesia 
+Subclass KNX  Law of Japan 
+Subclass KNY  Law of Cities, etc.   
+Subclass KP  Law of South Asia. Southeast Asia. East Asia 
+Subclass KPA  Law of Korea. South Korea 
+Subclass KPC  Law of Democratic People's Republic of Korea. North Korea 
+Subclass KPE  Law of Laos 
+Subclass KPF  Law of Macao 
+Subclass KPG  Law of Malaysia 
+Subclass KPG  Law of States of East and West Malaysia (1957- ) (Part 1) 
+Subclass KPH  Law of States of East and West Malaysia (1957- ) (Part 2) 
+Subclass KPH  Law of Maldives 
+Subclass KPJ  Law of Mongolia 
+Subclass KPK  Law of Nepal 
+Subclass KPL  Law of Pakistan 
+Subclass KPM  Law of Philippines 
+Subclass KPP  Law of Singapore 
+Subclass KPS  Law of Sri Lanka 
+Subclass KPT  Law of Thailand 
+Subclass KPV  Law of Vietnam 
+Subclass KPW  Law of Vietnam. South Vietnam              
+Subclass KQ  Law of Africa: History of law 
+Subclass KQ  Law of African indigenous peoples 
+Subclass KQC  African Regional comparative and uniform law 
+Subclass KQE  African Law of Regional organization and integration 
+Subclass KQG  Law of Algeria 
+Subclass KQH  Law of Angola 
+Subclass KQJ  Law of Benin 
+Subclass KQK  Law of Botswana 
+Subclass KQM  Law of British Central Africa Protectorate 
+Subclass KQP  Law of British Indian Ocean Territory 
+Subclass KQP  Law of British Somaliland 
+Subclass KQT  Law of Burkina Faso 
+Subclass KQV  Law of Burundi 
+Subclass KQW  Law of Cameroon 
+Subclass KQX  Law of Cape Verde 
+Subclass KR  Law of Africa 
+Subclass KRB  Law of Central African Republic 
+Subclass KRC  Law of Chad 
+Subclass KRE  Law of Comoros 
+Subclass KRG  Law of Congo 
+Subclass KRK  Law of Djibouti 
+Subclass KRL  Law of East Africa Protectorate 
+Subclass KRM  Law of Egypt 
+Subclass KRN  Law of Eritrea 
+Subclass KRP  Law of Ethiopia 
+Subclass KRR  Law of French Equatorial Africa 
+Subclass KRS  Law of French West Africa 
+Subclass KRU  Law of Gabon 
+Subclass KRV  Law of Gambia 
+Subclass KRW  Law of German East Africa 
+Subclass KRX  Law of Ghana 
+Subclass KRY  Law of Gibraltar 
+Subclass KS  Law of Africa 
+Subclass KSA  Law of Guinea 
+Subclass KSC  Law of Guinea-Bissau 
+Subclass KSE  Law of Equatorial Guinea 
+Subclass KSE  Law of Ifni 
+Subclass KSG  Law of Italian East Africa 
+Subclass KSG  Law of Italian Somaliland 
+Subclass KSH  Law of Ivory Coast 
+Subclass KSK  Law of Kenya 
+Subclass KSL  Law of Lesotho 
+Subclass KSN  Law of Liberia 
+Subclass KSP  Law of Libya 
+Subclass KSR  Law of Madagascar 
+Subclass KSS  Law of Malawi 
+Subclass KST  Law of Mali 
+Subclass KSU  Law of Mauritania 
+Subclass KSV  Law of Mauritius 
+Subclass KSV  Law of Mayotte 
+Subclass KSW  Law of Morocco 
+Subclass KSX  Law of Mozambique 
+Subclass KSY  Law of Namibia 
+Subclass KSZ  Law of Niger
+Subclass KT  Law of Africa
+Subclass KTA  Law of Nigeria 
+Subclass KTC  Law of Réunion 
+Subclass KTD  Law of Rwanda 
+Subclass KTE  Law of Saint Helena 
+Subclass KTF  Law of São Tomé and Principe 
+Subclass KTG  Law of Senegal 
+Subclass KTH  Law of Seychelles 
+Subclass KTJ  Law of Sierra Leone 
+Subclass KTK  Law of Somalia 
+Subclass KTL  Law of South Africa, Republic of 
+Subclass KTN  Law of Spanish West Africa (to 1958) 
+Subclass KTN  Law of Spanish Sahara (to 1975) 
+Subclass KTQ  Law of Sudan 
+Subclass KTR  Law of Swaziland 
+Subclass KTT  Law of Tanzania 
+Subclass KTU  Law of Togo 
+Subclass KTV  Law of Tunisia 
+Subclass KTW  Law of Uganda 
+Subclass KTX  Law of Zaire 
+Subclass KTY  Law of Zambia 
+Subclass KTY  Law of Zanzibar (to 1964) 
+Subclass KTZ  Law of Zimbabwe                        
+Subclass KU  Law of Australia 
+Subclass KUA  Law of Australian States and territories
+Subclass KUB  Law of Australian States and territories
+Subclass KUC  Law of Australian States and territories
+Subclass KUD  Law of Australian States and territories
+Subclass KUE  Law of Australian States and territories
+Subclass KUF  Law of Australian States and territories
+Subclass KUG  Law of Australian States and territories
+Subclass KUH  Law of Australian States and territories 
+Subclass KUN  Law of Norfolk Island 
+Subclass KUN  Law of Cities, communities, etc. 
+Subclass KUQ  Law of New Zealand                   
+Subclass KVB  Law of Australia and New Zealand 
+Subclass KVC  Law of Other Pacific area jurisdictions 
+Subclass KVE  Law of Regional organization and integration 
+Subclass KVH  Law of American Samoa 
+Subclass KVH  Law of British New Guinea (Territory of Papua) 
+Subclass KVL  Law of Cook Islands 
+Subclass KVM  Law of Easter Island 
+Subclass KVN  Law of Fiji 
+Subclass KVP  Law of French Polynesia 
+Subclass KVP  Law of German New Guinea (to 1914) 
+Subclass KVQ  Law of Guam 
+Subclass KVR  Law of Kiribati 
+Subclass KVS  Law of Marshall Islands 
+Subclass KVS  Law of Micronesia (Federated States) 
+Subclass KVS  Law of Midway Islands 
+Subclass KVU  Law of Nauru 
+Subclass KVU  Law of Netherlands New Guinea (to 1963) 
+Subclass KVW  Law of New Caledonia Subclass KW 
+Subclass KWA  Law of Niue 
+Subclass KWC  Law of Northern Mariana Islands 
+Subclass KWE  Law of Pacific Islands (Trust Territory) 
+Subclass KWG  Law of Palau 
+Subclass KWH  Law of Papua New Guinea 
+Subclass KWL  Law of Pitcairn Island 
+Subclass KWL  Law of Solomon Islands 
+Subclass KWP  Law of Tonga 
+Subclass KWQ  Law of Tuvalu 
+Subclass KWR  Law of Vanuatu 
+Subclass KWT  Law of Wake Island 
+Subclass KWT  Law of Wallis and Futuna Islands 
+Subclass KWW  Law of Western Samoa 
+Subclass KWX  Antarctica
+Subclass KZ  Law of nations
+
+L -- Education
+
+Subclass L  Education (General) 
+Subclass LA  History of education 
+Subclass LB  Theory and practice of education 
+Subclass LC  Special aspects of education 
+Subclass LD  Individual institutions - United States 
+Subclass LE  Individual institutions - America (except United States) 
+Subclass LF  Individual institutions - Europe 
+Subclass LG  Individual institutions - Asia, Africa, Indian Ocean islands, Australia, New Zealand, Pacific islands 
+Subclass LH  College and school magazines and papers 
+Subclass LJ  Student fraternities and societies, United States 
+Subclass LT  Textbooks 
+
+M -- Music And Books On Music
+
+Subclass M  Music 
+Subclass ML  Literature on music 
+Subclass MT  Music Instruction and study 
+
+N -- Fine Arts
+
+Subclass N  Visual arts
+Subclass NA  Architecture
+Subclass NB  Sculpture
+Subclass NC  Drawing. Design. Illustration
+Subclass ND  Painting
+Subclass NE  Print media
+Subclass NK  Decorative arts
+Subclass NX  Arts in general
+
+P -- Language And Literature
+
+Subclass P  Philology. Linguistics 
+Subclass PA  Greek language and literature. Latin language and literature 
+Subclass PB  Modern languages. Celtic languages 
+Subclass PC  Romanic languages 
+Subclass PD  Germanic languages. Scandinavian languages 
+Subclass PE  English language 
+Subclass PF  West Germanic languages 
+Subclass PG  Slavic languages. Baltic languages. Albanian language 
+Subclass PH  Uralic languages. Basque language 
+Subclass PJ  Oriental languages and literatures 
+Subclass PK  Indo-Iranian languages and literatures 
+Subclass PL  Languages and literatures of Eastern Asia, Africa, Oceania 
+Subclass PM  Hyperborean, Indian, and artificial languages 
+Subclass PN  Literature (General) 
+Subclass PQ  French literature - Italian literature - Spanish literature - Portuguese literature 
+Subclass PR  English literature 
+Subclass PS  American literature 
+Subclass PT  Literature: German, Dutch, Flemish since 1830, Afrikaans, Scandinavian, Old Norse, Old Icelandic, Old Norwegian, Modern Icelandic , Faroese, Danish, Norwegian, Swedish 
+Subclass PZ  Fiction and juvenile belles lettres
+
+Q -- Science
+
+Subclass Q  Science (General)
+Subclass QA  Mathematics
+Subclass QB  Astronomy
+Subclass QC  Physics
+Subclass QD  Chemistry
+Subclass QE  Geology
+Subclass QH  Natural history  - Biology 
+Subclass QK  Botany
+Subclass QL  Zoology
+Subclass QM  Human anatomy
+Subclass QP  Physiology
+Subclass QR  Microbiology
+
+R -- Medicine
+
+Subclass R  Medicine (General)
+Subclass RA  Public aspects of medicine
+Subclass RB  Pathology
+Subclass RC  Internal medicine
+Subclass RD  Surgery
+Subclass RE  Ophthalmology
+Subclass RF  Otorhinolaryngology
+Subclass RG  Gynecology and obstetrics
+Subclass RJ  Pediatrics
+Subclass RK  Dentistry
+Subclass RL  Dermatology
+Subclass RM  Therapeutics. Pharmacology
+Subclass RS  Pharmacy and materia medica
+Subclass RT  Nursing
+Subclass RV  Botanic, Thomsonian, and eclectic medicine
+Subclass RX  Homeopathy
+Subclass RZ  Other systems of medicine
+
+S -- Agriculture
+
+Subclass S  Agriculture (General)
+Subclass SB  Plant culture
+Subclass SD  Forestry
+Subclass SF  Animal culture
+Subclass SH  Aquaculture. Fisheries. Angling
+Subclass SK  Hunting sports
+
+T -- Technology
+
+Subclass T  Technology (General)
+Subclass TA  Engineering (General). Civil engineering
+Subclass TC  Hydraulic engineering. Ocean engineering
+Subclass TD  Environmental technology. Sanitary engineering
+Subclass TE  Highway engineering. Roads and pavements
+Subclass TF  Railroad engineering and operation
+Subclass TG  Bridge engineering
+Subclass TH  Building construction
+Subclass TJ  Mechanical engineering and machinery
+Subclass TK  Electrical engineering. Electronics. Nuclear engineering
+Subclass TL  Motor vehicles. Aeronautics. Astronautics
+Subclass TN  Mining engineering. Metallurgy
+Subclass TP  Chemical technology
+Subclass TR  Photography
+Subclass TS  Manufactures
+Subclass TT  Handicrafts. Arts and crafts
+Subclass TX  Home economics
+
+U -- Military Science
+
+Subclass U  Military science (General)
+Subclass UA  Armies: Organization, distribution, military situation
+Subclass UB  Military administration
+Subclass UC  Maintenance and transportation
+Subclass UD  Infantry
+Subclass UE  Cavalry. Armor
+Subclass UF  Artillery
+Subclass UG  Military engineering. Air forces
+Subclass UH  Other military services
+
+V -- Naval Science
+
+Subclass V  Naval science (General)
+Subclass VA  Navies: Organization, distribution, naval situation
+Subclass VB  Naval administration
+Subclass VC  Naval maintenance
+Subclass VD  Naval seamen
+Subclass VE  Marines
+Subclass VF  Naval ordnance
+Subclass VG  Minor services of navies
+Subclass VK  Navigation. Merchant marine
+Subclass VM  Naval architecture. Shipbuilding. Marine engineering
+
+Z -- Bibliography. Library Science. Information Resources (General)
+
+Subclass Z  Books (General). Writing. Paleography. Book industries and trade. Libraries. Bibliography 
+Subclass ZA  Information resources (General) 
+
