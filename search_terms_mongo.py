@@ -96,8 +96,8 @@ def main(argv):
 		dimensions='ga:searchKeyword,ga:hour,ga:city,ga:region,ga:country,ga:longitude,ga:latitude'
 		# start_date_str = '2011-07-06'
 		# end_date_str = '2012-03-20'
-		start_date_str = '2012-03-20'
-		end_date_str = '2012-04-20'
+		start_date_str = '2012-04-19'
+		end_date_str = '2012-09-25'
 		start_date = datetime.strptime(start_date_str, '%Y-%m-%d')
 		end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
 		date_delta = end_date - start_date
@@ -344,7 +344,7 @@ def rows_to_mongo(results, site_name, date_str):
 			# Not creating own unique _id field, so check for term, date + hour & site match before saving
 			pv_obj = db.searches.find_one({'site':site_name,'timestamp':timestamp,'searchkeyword':term},{'_id':True})
 			if pv_obj is None:
-				db.searches.save(search_result)
+				db.searches.save(search_result, safe=True)
 	else:
 		print 'No Rows Found'
 

@@ -60,13 +60,14 @@ except ConnectionFailure:
     sys.exit(1)
 
 db = db_conn['library_vis']
+crit = {'term_list':{'$exists':False}}
 
-total_count = db.searches.find().count()
+total_count = db.searches.find(crit).count()
 
-for count,doc in enumerate(db.searches.find({},{'_id':True,'searchkeyword':True},snapshot=True)):
+for count,doc in enumerate(db.searches.find(crit, {'_id':True,'searchkeyword':True}, snapshot=True)):
 	if count%1000 == 0:
 		print count, '/', total_count
 	
 	term_list = tokenize(doc['searchkeyword'])
 	
-	db.searches.update({'_id':doc['_id']},{'$set':{'term_list':term_list,'n_terms':len(term_list)}}, upsert=False, multi=False)
+	db.searches.update({'_id':doc['_id']},{'$set':{'term_list':term_list,'n_terms':len(term_list)}}, upsert=False, multi=False, safe=True)

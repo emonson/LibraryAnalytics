@@ -3,6 +3,10 @@
 
 # http://architects.dzone.com/articles/walkthrough-mongodb-mapreduce
 
+# This script does mapreduce on the library vis mongodb page views to
+# count up views according to LCC category and subcategory. Then add normalized
+# visitors values to the pageview docs themselves
+
 from pymongo import Connection
 from bson.code import Code
 from bson.son import SON
@@ -16,6 +20,8 @@ except ConnectionFailure:
     sys.exit(1)
 
 db = db_conn['library_vis']
+
+# PAGEVIEWS
 
 # overall sums per term over all entries
 m = Code("function() {"
@@ -34,11 +40,11 @@ r = Code("function(key,values) {"
          "  return total;"
          "}")
 
-# print 'Running overall counts on lcc first letter'
-# db.pageviews.map_reduce(m, r, out=SON([("replace","out_lccfirst_key_total_count")]))
-# print 'Running overall counts on lcc detailed category'
-# db.pageviews.map_reduce(m2, r, out=SON([("replace","out_lcccategory_key_total_count")]))
-# print 'Done'
+print 'Running overall counts on lcc first letter'
+db.pageviews.map_reduce(m, r, out=SON([("replace","out_lccfirst_key_total_count")]))
+print 'Running overall counts on lcc detailed category'
+db.pageviews.map_reduce(m2, r, out=SON([("replace","out_lcccategory_key_total_count")]))
+print 'Done'
 
 print 'Loading results of mapreduce back in for normalization'
 lcc_first_counts = {}
@@ -61,16 +67,18 @@ for count,doc in enumerate(db.pageviews.find({},{'_id':True,'lcc_first_letter':T
 		visitors_per_lcc_first = float(doc['visitors'])/float(lcc_first_counts[doc['lcc_first_letter']])
 		visitors_per_lcc_category = float(doc['visitors'])/float(lcc_cat_counts[doc['lcc_category']])
 		
-		db.pageviews.update({'_id':doc['_id']},{'$set':{'visitors_per_lcc_first':visitors_per_lcc_first,'visitors_per_lcc_category':visitors_per_lcc_category}}, upsert=False, multi=False)
+		db.pageviews.update({'_id':doc['_id']},{'$set':{'visitors_per_lcc_first':visitors_per_lcc_first,'visitors_per_lcc_category':visitors_per_lcc_category}}, upsert=False, multi=False, safe=True)
 	
 	elif ('visitors' in doc):
 	
 		visitors_per_lcc_first = float(doc['visitors'])/float(lcc_first_counts[None])
 		visitors_per_lcc_category = float(doc['visitors'])/float(lcc_cat_counts[None])
 		
-		db.pageviews.update({'_id':doc['_id']},{'$set':{'visitors_per_lcc_first':visitors_per_lcc_first,'visitors_per_lcc_category':visitors_per_lcc_category}}, upsert=False, multi=False)
+		db.pageviews.update({'_id':doc['_id']},{'$set':{'visitors_per_lcc_first':visitors_per_lcc_first,'visitors_per_lcc_category':visitors_per_lcc_category}}, upsert=False, multi=False, safe=True)
 	
 print 'Done'
+
+# SEARCH TERMS
 
 # keyed by term, compile counts per date
 map_f = Code("function() {"

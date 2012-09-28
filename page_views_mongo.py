@@ -98,8 +98,8 @@ def main(argv):
 		#   at a time, anyway...
 		metrics = 'ga:visitors'
 		dimensions = 'ga:pagePath,ga:hour,ga:city,ga:region,ga:country,ga:latitude,ga:longitude'
-		start_date_str = '2011-10-06'
-		end_date_str = '2012-11-02'
+		start_date_str = '2012-07-1'
+		end_date_str = '2012-07-31'
 		start_date = datetime.strptime(start_date_str, '%Y-%m-%d')
 		end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
 		date_delta = end_date - start_date
@@ -432,7 +432,7 @@ def rows_to_mongo(results, date_str):
 			# Not creating own unique _id field, so check for date + hour & page match before saving
 			pv_obj = db.pageviews.find_one({'uniqueid':id_str,'timestamp':timestamp},{'_id':True})
 			if pv_obj is None:
-				db.pageviews.save(page_view)
+				db.pageviews.save(page_view, safe=True)
 	else:
 		print 'No Rows Found'
 
