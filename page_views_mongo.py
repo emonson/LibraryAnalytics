@@ -78,8 +78,8 @@ lcc_re = re.compile(r'([A-Z]{1,3})[0-9]{1,4}')
 
 # Make a connection to Mongo.
 try:
-		# db_conn = Connection()
-		db_conn = Connection("emo2.trinity.duke.edu", 27017)
+		db_conn = Connection()
+		# db_conn = Connection("emo2.trinity.duke.edu", 27017)
 except ConnectionFailure:
 		print "couldn't connect: be sure that Mongo is running on localhost:27017"
 		sys.exit(1)
@@ -98,8 +98,8 @@ def main(argv):
 		#   at a time, anyway...
 		metrics = 'ga:visitors'
 		dimensions = 'ga:pagePath,ga:hour,ga:city,ga:region,ga:country,ga:latitude,ga:longitude'
-		start_date_str = '2012-07-1'
-		end_date_str = '2012-07-31'
+		start_date_str = '2013-02-28'
+		end_date_str = '2013-04-02'
 		start_date = datetime.strptime(start_date_str, '%Y-%m-%d')
 		end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
 		date_delta = end_date - start_date
@@ -394,30 +394,35 @@ def rows_to_mongo(results, date_str):
 			if 'lcc' in item_obj:
 				# lcc gets added on later (not in originally returned xml)
 				lcc = item_obj['lcc']
-			else:				
-				call_number = item_obj['call-number']
+			else:
+				if 'call-number' in item_obj:
+					call_number = item_obj['call-number']
 				
-				# Multiple call-numbers separated by '|'
-				first_call_number = call_number.split('|')[0]
-				lcc = first_call_number.split(' ')[0]
+					# Multiple call-numbers separated by '|'
+					first_call_number = call_number.split('|')[0]
+					lcc = first_call_number.split(' ')[0]
 				
-				# If call number doesn't fit the right pattern
-				#		then search the OCLC Classify service and pull the LCC category from there
-				lcc_match = lcc_re.match(lcc)
-				if lcc_match is None:
-					if 'oclcnumber' in item_obj:
-						oclc_str = item_obj['oclcnumber']
-						lcc = oclc_classify_xml.get_lcc_class(oclc_str)
+					# If call number doesn't fit the right pattern
+					#		then search the OCLC Classify service and pull the LCC category from there
+					lcc_match = lcc_re.match(lcc)
+					if lcc_match is None:
+						if 'oclcnumber' in item_obj:
+							oclc_str = item_obj['oclcnumber']
+							lcc = oclc_classify_xml.get_lcc_class(oclc_str)
 					
-						# Test one more time and blank out if not right
-						if lcc is None:
-							lcc = 'unknown'
-						else:
-							lcc_match = lcc_re.match(lcc)
-							if lcc_match is None:
+							# Test one more time and blank out if not right
+							if lcc is None:
 								lcc = 'unknown'
-					else:
-						lcc = 'unknown'
+							else:
+								lcc_match = lcc_re.match(lcc)
+								if lcc_match is None:
+									lcc = 'unknown'
+						else:
+							lcc = 'unknown'
+				
+				# no call number, either
+				else:
+					lcc = 'unknown'
 			
 				# Store in db for future use
 				db.items.update({'uniqueid':id_str},{'$set':{'lcc':lcc}})
