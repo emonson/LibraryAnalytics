@@ -98,8 +98,8 @@ def main(argv):
 		#   at a time, anyway...
 		metrics = 'ga:visitors'
 		dimensions = 'ga:pagePath,ga:hour,ga:city,ga:region,ga:country,ga:latitude,ga:longitude'
-		start_date_str = '2013-02-28'
-		end_date_str = '2013-04-02'
+		start_date_str = '2013-04-01'
+		end_date_str = '2013-04-03'
 		start_date = datetime.strptime(start_date_str, '%Y-%m-%d')
 		end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
 		date_delta = end_date - start_date

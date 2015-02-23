@@ -4,7 +4,7 @@
 # and dump files into GridFS
 
 import httplib
-from BeautifulSoup import BeautifulStoneSoup
+from bs4 import BeautifulStoneSoup
 import re
 import time
 import random
