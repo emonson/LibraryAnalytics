@@ -44,7 +44,7 @@ fieldsDF.iloc[fields_ordering,:].to_csv(os.path.join(data_dir, 'fields.txt'), se
 print 'concatenating...'
 dfs = pd.concat(list_dfs, axis=0)
 # Concatenated DataFrames index are screwed up, so reset to integers and delete old 'index'
-dfs.reset_index()
+dfs.reset_index(inplace=True)
 dfs.drop('index', axis=1, inplace=True)
 
 print 'saving text output...'
