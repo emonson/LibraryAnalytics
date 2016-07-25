@@ -38,7 +38,7 @@ for new_file in new_files:
     sYear = pd.Series(yeartxt, index=df.index, name='year')
     sMonth = pd.Series(pd.DatetimeIndex(df.olddate).month, index=df.index, name='month')
     sDay = pd.Series(pd.DatetimeIndex(df.olddate).day, index=df.index, name='day')
-    dfdate = pd.to_datetime(pd.DataFrame([sYear, sMonth, sDay]).T)
+    dfdate = pd.to_datetime(pd.concat([sYear, sMonth, sDay], axis=1))
     df.insert(0, 'date', pd.Series(dfdate, index=df.index))
     del df['olddate']
     # Make sure it's saving in current Excel format
@@ -46,5 +46,5 @@ for new_file in new_files:
         new_file = new_file + 'x'
     # Controlling datetime output format so time won't be included
     writer = pd.ExcelWriter(os.path.join(fixed_data_path, new_file), datetime_format='yyyy-mm-dd')
-    df.to_excel(writer, 'Sheet1')
+    df.to_excel(writer, 'Sheet1', index=False)
     
