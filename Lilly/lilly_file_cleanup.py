@@ -9,6 +9,7 @@ new_data_dir = 'Lilly_date_names'
 
 orig_data_path = os.path.join(data_base_dir, orig_data_dir)
 new_data_path = os.path.join(data_base_dir, new_data_dir)
+fixed_data_path = os.path.join(data_base_dir, fixed_data_dir)
 
 paths = []
 cat_idxs = []
@@ -64,3 +65,4 @@ column_names_df = pd.DataFrame.from_dict(column_names_dict, orient='index')
 column_names_df.sort_index(inplace=True)
 
 column_names_df.to_csv(os.path.join(data_base_dir, 'orig_column_names.csv'))
+
