@@ -69,7 +69,7 @@ n_files = len(glob.glob(os.path.join( data_dir, '*' + data_file_ending )))
 
 for ii, input_path in enumerate(glob.iglob(os.path.join( data_dir, '*' + data_file_ending ))):
 
-    if ii%20 == 0:
+    if ii%100 == 0:
         print( u"{} / {}".format(ii, n_files) )
         
 	# Read file
