@@ -27,10 +27,9 @@ for ii, input_path in enumerate(glob.iglob(os.path.join( data_dir, '*' + data_fi
     doc_string = fp.read()
     
     # Remove carriage returns and newlines
-    doc_string.replace('\n', ' ')
-    doc_string.replace('\r', ' ')
+    clean_string = doc_string.replace('\n', ' ').replace('\r', ' ')
 
     # Write 
-    outfile.write(u'{}\t{}\t{}\n'.format(input_filename, doc_string))
+    outfile.write(u'{}\t{}\n'.format(input_filename, clean_string))
 
 outfile.close()
