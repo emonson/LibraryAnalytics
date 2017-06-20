@@ -1,4 +1,5 @@
 analytics.dat
+analyticsreporting.dat
 client_secrets.json
 *.pyc
 *.tsv
